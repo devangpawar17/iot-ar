@@ -11,13 +11,13 @@ app.get('/get',(req,res)=>{
     res.send(data)
 })
 
-app.post('/on',(req,res)=>{
+app.get('/on',(req,res)=>{
     const data = "on"
     fs.writeFileSync("./switch.txt",data)
     res.send("on")
 })
 
-app.post('/off',(req,res)=>{
+app.get('/off',(req,res)=>{
     const data = "off"
     fs.writeFileSync("./switch.txt",data)
     res.send("off")
